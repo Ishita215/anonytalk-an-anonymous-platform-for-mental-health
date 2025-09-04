@@ -1,0 +1,98 @@
+:root {
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --neon-cyan: #4fffd0;
+    --neon-purple: #9d7cff;
+    --deep-space: #0a0e1a;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--deep-space), #1a1a4a);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--neon-cyan);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--neon-cyan);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.post {
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+    margin: 1rem 0;
+}
+
+.post:hover {
+    transform: translateX(5px);
+}
+
+.upvote-btn:hover {
+    color: var(--neon-cyan);
+    border-color: var(--neon-cyan);
+}
+
+.post-input {
+    background: var(--glass-bg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    color: white;
+}
+
+.post-input:focus {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(79, 255, 208, 0.2);
+    outline: none;
+}
+
+.category-tag {
+    background: rgba(79, 255, 208, 0.1);
+    border: 1px solid var(--neon-cyan);
+    cursor: pointer;
+}
+
+.container {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}

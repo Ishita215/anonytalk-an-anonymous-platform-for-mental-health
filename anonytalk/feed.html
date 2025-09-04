@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Shared Space</title>
+  <link rel="stylesheet" href="feed.css" />
+</head>
+<body>
+    <!-- Hamburger Button -->
+<div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+<!-- Sidebar -->
+<div id="sidebar" class="sidebar">
+  <h2>📘 Menu</h2>
+  <ul>
+    <li><a href="#">👥 Communities</a></li>
+    <li><a href="feed.html">📰 New Posts</a></li>
+    <li><a href="#">🔍 Search by Tags</a></li>
+    <li><a href="#">🧭 Explore</a></li>
+    <li><a href="#">📝 Poetry</a></li>
+  </ul>
+</div>
+
+  <header>
+    <h1>🧍 The Shared Space</h1>
+    <button onclick="window.location.href='create-post.html'">➕ Post Something</button>
+  </header>
+
+  <main>
+    <div id="feed"></div>
+  </main>
+
+  <script src="feed.js"></script>
+  <script>
+  function toggleSidebar() {
+    document.getElementById("sidebar").classList.toggle("open");
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anony Talk | Express Freely</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.27/build/spline-viewer.js"></script>
+  <link rel="stylesheet" href="deepseek_css_20250713_7dafe7.css">
+</head>
+<body>
+  <!-- Spline Background -->
+  <div id="spline-background">
+    <spline-viewer url="https://prod.spline.design/3VtuRRhfiEuGvAlu/scene.splinecode"></spline-viewer>
+  </div>
+
+  <!-- Background canvas -->
+  <canvas id="avatarCanvas"></canvas>
+  
+  <!-- Floating particles -->
+  <div class="floating-particles"></div>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#vision">Vision</a>
+    <a href="#why">Why Choose</a>
+    <a href="#safety">Safety</a>
+    <a href="#features">Features</a>
+  </nav>
+
+  <!-- Main content -->
+  <div class="container">
+    <h1>Welcome to Anony Talk</h1>
+    <p class="subtext">A secure and anonymous space to express, heal, and connect — without filters or judgment.</p>
+
+    <div class="cylinder">
+      <div class="carousel">
+        <div class="card" style="--angle: 0deg">
+          <img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&w=800&q=60" alt="Speak Freely" />
+          <button onclick="document.getElementById('vision').scrollIntoView({behavior: 'smooth'})">About</button>
+        </div>
+        <div class="card" style="--angle: 120deg">
+          <img src="https://images.unsplash.com/photo-1510074377623-8cf13fb90f23?auto=format&fit=crop&w=800&q=60" alt="Emotional Release" />
+          <button onclick="document.getElementById('why').scrollIntoView({behavior: 'smooth'})">Why Us</button>
+        </div>
+        <div class="card" style="--angle: 240deg">
+          <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=60" alt="True Anonymity" />
+          <button onclick="document.getElementById('safety').scrollIntoView({behavior: 'smooth'})">Safety</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="start-button">Start Talking Anonymously</button>
+  </div>
+
+  <section id="vision">
+    <div class="divider"></div>
+    <h2>Our Vision</h2>
+    <p>To empower individuals to speak their truth without judgment. Anony Talk envisions a world where people are free to express without the fear of identity, bias, or backlash. We believe everyone deserves a platform that listens, not tracks. We strive to normalize mental health conversations and provide an outlet for unspoken thoughts.</p>
+    
+    <p>Our platform is designed to be a sanctuary where users can explore their thoughts and emotions without the constraints of societal expectations. By removing identity from the equation, we create a space for genuine connection and understanding. We envision a future where mental wellness is prioritized, and everyone has access to a judgment-free zone for self-expression.</p>
+    
+    <div class="illustration">
+      <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=800&q=60" alt="Vision Illustration">
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="divider"></div>
+    <h2>Why Choose Anony Talk?</h2>
+    <p>We're more than just a chat platform — we are a movement. A safe space where your words matter, not your identity. Anony Talk brings emotional connection, crowd empathy, and the chance to share without being watched. Whether you're venting after a hard day or need to say something you never could — we're here.</p>
+    
+    <p>Our unique approach combines cutting-edge technology with psychological principles to create a truly transformative experience. Unlike traditional platforms, we don't profile or track users. Instead, we focus on creating meaningful connections based on shared experiences and mutual understanding. The result is a community built on empathy, not algorithms.</p>
+    
+    <div class="illustration">
+      <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=800&q=60" alt="Why Choose Illustration">
+    </div>
+  </section>
+
+  <section id="safety">
+    <div class="divider"></div>
+    <h2>Built for Your Safety</h2>
+    <p>We don’t ask for names, emails, or logins. No cookies, no trackers — just pure expression. Every conversation on Anony Talk is encrypted end-to-end. Your identity is never stored. You’re not a user — you're a voice. And that voice deserves freedom and safety.</p>
+    
+    <p>Our security protocols go beyond standard encryption. We utilize zero-knowledge architecture meaning we never have access to your data. All messages are ephemeral by default, disappearing after 24 hours. We conduct regular security audits and have implemented strict content moderation to ensure a safe environment for everyone.</p>
+    
+    <div class="illustration">
+      <img src="https://images.unsplash.com/photo-1600267185053-6fa6a4d994be?auto=format&fit=crop&w=800&q=60" alt="Privacy Illustration">
+    </div>
+  </section>
+  
+  <section id="features">
+    <div class="divider"></div>
+    <h2>Core Features</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">👤</div>
+        <h3>Complete Anonymity</h3>
+        <p>No personal information required. Your identity remains protected at all times.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Military-Grade Encryption</h3>
+        <p>All communications are end-to-end encrypted with the latest security protocols.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>Real-time Support</h3>
+        <p>Connect with trained listeners who provide empathetic, non-judgmental support.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">🌐</div>
+        <h3>Global Community</h3>
+        <p>Join thousands of users worldwide sharing experiences and offering support.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="deepseek_javascript_20250713_078c68.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowthPulse - Ultimate Self-Improvement Suite</title>
+    <link rel="stylesheet" href="improve.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas class="particles"></canvas>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🚀 GrowthPulse</h1>
+            <p>Personal Development Ecosystem</p>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" onclick="showSection('habits')">🔄 Habits</div>
+            <div class="tab" onclick="showSection('learning')">🎓 Learning</div>
+            <div class="tab" onclick="showSection('mindfulness')">🧘 Mindfulness</div>
+            <div class="tab" onclick="showSection('progress')">📈 Progress</div>
+        </div>
+
+        <!-- Habits Section -->
+        <div id="habits" class="section active">
+            <div class="grid">
+                <div class="card">
+                    <h3>Daily Challenges</h3>
+                    <ul class="habit-list">
+                        <li data-habit="1" class="habit-item">
+                            <span>🏋️ Exercise 30 Minutes</span>
+                            <button onclick="toggleHabit(this)">Start</button>
+                        </li>
+                        <li data-habit="2" class="habit-item">
+                            <span>📚 Read 20 Pages</span>
+                            <button onclick="toggleHabit(this)">Start</button>
+                        </li>
+                        <li data-habit="3" class="habit-item">
+                            <span>💧 Drink 2L Water</span>
+                            <button onclick="toggleHabit(this)">Start</button>
+                        </li>
+                        <li data-habit="4" class="habit-item">
+                            <span>🧘 Meditate 10 Min</span>
+                            <button onclick="toggleHabit(this)">Start</button>
+                        </li>
+                        <li data-habit="5" class="habit-item">
+                            <span>📝 Journal Entry</span>
+                            <button onclick="toggleHabit(this)">Start</button>
+                        </li>
+                        <li data-habit="6" class="habit-item">
+                            <span>🎯 Skill Practice</span>
+                            <button onclick="toggleHabit(this)">Start</button>
+                        </li>
+                        <li data-habit="7" class="habit-item">
+                            <span>🌅 Early Wake-up</span>
+                            <button onclick="toggleHabit(this)">Start</button>
+                        </li>
+                        <li data-habit="8" class="habit-item">
+                            <span>📵 Digital Detox</span>
+                            <button onclick="toggleHabit(this)">Start</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Learning Section -->
+        <div id="learning" class="section">
+            <div class="grid">
+                <div class="card">
+                    <h3>Skill Development</h3>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/LlFbW1i2HKA" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/75d_29QWELk" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mindfulness Section -->
+        <div id="mindfulness" class="section">
+            <div class="grid">
+                <div class="card">
+                    <h3>Mindfulness Practice</h3>
+                    <div class="breath-circle"></div>
+                    <button onclick="toggleBreathing()" style="display: block; margin: 0 auto;">Start Breathing Exercise</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Section -->
+        <div id="progress" class="section">
+            <div class="grid">
+                <div class="card">
+                    <h3>Progress Tracker</h3>
+                    <div class="calendar" id="calendar"></div>
+                    <div class="stats">
+                        <div class="stat">
+                            <h4>🔥 Current Streak</h4>
+                            <div class="stat-value" id="streak">0 Days</div>
+                        </div>
+                        <div class="stat">
+                            <h4>✅ Total Completed</h4>
+                            <div class="stat-value" id="totalCompleted">0 Habits</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="improve.js"></script>
+  
+</body>
+</html>

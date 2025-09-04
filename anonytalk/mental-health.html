@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindfulSpace - Complete Wellness Hub</title>
+     <link rel="stylesheet" href="mental.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌌 MindfulSpace - Complete Wellness Hub</h1>
+        
+        <div class="tabs">
+            <div class="tab active" onclick="showSection('dashboard')">🏠 Dashboard</div>
+            <div class="tab" onclick="showSection('mood')">😊 Mood</div>
+            <div class="tab" onclick="showSection('thoughts')">🌀 Thoughts</div>
+            <div class="tab" onclick="showSection('sessions')">🧘 Sessions</div>
+            <div class="tab" onclick="showSection('challenges')">🏆 Challenges</div>
+            <div class="tab" onclick="showSection('community')">👥 Community</div>
+            <div class="tab" onclick="showSection('stories')">📖 Stories</div>
+            <div class="tab" onclick="showSection('quotes')">💬 Quotes</div>
+            <div class="tab" onclick="showSection('crisis')">🆘 Crisis</div>
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard" class="section active">
+            <div class="card-grid">
+                <div class="card">
+                    <h3>📊 Weekly Summary</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 65%"></div>
+                    </div>
+                    <p>65% Positive Days</p>
+                </div>
+                <div class="card">
+                    <h3>💡 Quick Actions</h3>
+                    <button onclick="showSection('mood')">Log Mood</button>
+                    <button onclick="showSection('thoughts')">Journal Entry</button>
+                    <button onclick="showSection('sessions')">Start Meditation</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mood Tracker -->
+        <div id="mood" class="section">
+            <h2>📅 Mood Calendar</h2>
+            <div class="mood-tracker">
+                <div class="mood-emoji-picker">
+                    <button class="emoji-btn" onclick="logMood('😊')">😊</button>
+                    <button class="emoji-btn" onclick="logMood('😐')">😐</button>
+                    <button class="emoji-btn" onclick="logMood('😞')">😞</button>
+                </div>
+                <div class="mood-calendar" id="moodCalendar"></div>
+            </div>
+        </div>
+
+        <!-- Thought Journal -->
+        <div id="thoughts" class="section">
+            <div class="thought-journal">
+                <h2>📔 Thought Journal</h2>
+                <div class="thought-entry">
+                    <textarea class="thought-textarea" placeholder="What's on your mind?" id="thoughtInput"></textarea>
+                    <div class="thought-tags" id="tagContainer">
+                        <div class="thought-tag" onclick="toggleTag('anxiety')">😰 Anxiety</div>
+                        <div class="thought-tag" onclick="toggleTag('happy')">😊 Happy</div>
+                        <div class="thought-tag" onclick="toggleTag('creative')">🎨 Creative</div>
+                    </div>
+                    <button onclick="saveThought()">Save Entry</button>
+                </div>
+                <div class="sentiment-analysis">
+                    <h3>🧠 Sentiment Analysis</h3>
+                    <div id="sentimentResult"></div>
+                </div>
+                <div id="thoughtHistory"></div>
+            </div>
+        </div>
+
+        <!-- Guided Sessions -->
+        <div id="sessions" class="section">
+            <h2>🧘 Guided Sessions</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>🌅 Morning Meditation</h3>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/inpok4MKVLM" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="card">
+                    <h3>🌙 Sleep Stories</h3>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/z6X5oEIg6Ak" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <!-- Challenges Section -->
+        <div id="challenges" class="section">
+            <h2>🏆 Wellness Challenges</h2>
+            <div class="card-grid">
+                <!-- Daily Habits -->
+                <div class="card">
+                    <h3>🌅 Daily Habits</h3>
+                    <div class="challenge-item">
+                        <span>🌱 5-Min Morning Breathing</span>
+                        <button onclick="toggleChallenge(this)">Start</button>
+                    </div>
+                    <div class="challenge-item">
+                        <span>💧 Hydration Check (8 glasses)</span>
+                        <button onclick="toggleChallenge(this)">Start</button>
+                    </div>
+                    <div class="challenge-item">
+                        <span>📝 Evening Gratitude Journal</span>
+                        <button onclick="toggleChallenge(this)">Start</button>
+                    </div>
+                </div>
+
+                <!-- Anxiety Management -->
+                <div class="card">
+                    <h3>😰 Anxiety Support</h3>
+                    <div class="challenge-item">
+                        <span>🧠 5-4-3-2-1 Grounding</span>
+                        <button onclick="toggleChallenge(this)">Guide Me</button>
+                    </div>
+                    <div class="challenge-item">
+                        <span>📵 30-Min Digital Detox</span>
+                        <button onclick="toggleChallenge(this)">Start</button>
+                    </div>
+                    <div class="challenge-item">
+                        <span>💬 Share One Worry</span>
+                        <button onclick="toggleChallenge(this)">Complete</button>
+                    </div>
+                </div>
+
+                <!-- Mood Boosters -->
+                <div class="card">
+                    <h3>😞 Mood Boosters</h3>
+                    <div class="challenge-item">
+                        <span>☀️ 15-Min Sun Exposure</span>
+                        <button onclick="toggleChallenge(this)">Complete</button>
+                    </div>
+                    <div class="challenge-item">
+                        <span>🎵 Uplifting Music Session</span>
+                        <button onclick="toggleChallenge(this)">Start</button>
+                    </div>
+                    <div class="challenge-item">
+                        <span>📞 Connect with Loved One</span>
+                        <button onclick="toggleChallenge(this)">Complete</button>
+                    </div>
+                </div>
+
+                <!-- Stress Management -->
+                <div class="card">
+                    <h3>💆 Stress Relief</h3>
+                    <div class="challenge-item">
+                        <span>🖐️ Muscle Relaxation</span>
+                        <button onclick="toggleChallenge(this)">Guide Me</button>
+                    </div>
+                    <div class="challenge-item">
+                        <span>🫖 Herbal Tea Break</span>
+                        <button onclick="toggleChallenge(this)">Complete</button>
+                    </div>
+                    <div class="challenge-item">
+                        <span>📴 1-Hour Notification-Free</span>
+                        <button onclick="toggleChallenge(this)">Start</button>
+                    </div>
+                </div>
+
+                <!-- Social Connection -->
+                <div class="card">
+                    <h3>👥 Social Wellness</h3>
+                    <div class="challenge-item">
+                        <span>💖 Give a Compliment</span>
+                        <button onclick="toggleChallenge(this)">Complete</button>
+                    </div>
+                    <div class="challenge-item">
+                        <span>🤗 Virtual Hug Someone</span>
+                        <button onclick="toggleChallenge(this)">Complete</button>
+                    </div>
+                    <div class="challenge-item">
+                        <span>🎮 Online Game with Friends</span>
+                        <button onclick="toggleChallenge(this)">Start</button>
+                    </div>
+                </div>
+
+                <!-- Professional Support -->
+                <div class="card crisis-section">
+                    <h3>🆘 Critical Support</h3>
+                    <div class="challenge-item">
+                        <span>📞 Emergency Helpline Call</span>
+                        <button onclick="showSection('crisis')">Contact</button>
+                    </div>
+                    <div class="challenge-item">
+                        <span>💊 Medication Check-In</span>
+                        <button onclick="logMedication()">Remind Me</button>
+                    </div>
+                    <div class="challenge-item">
+                        <span>👩⚕️ Therapy Session Prep</span>
+                        <button onclick="therapyPrep()">Start</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Community -->
+        <div id="community" class="section">
+            <h2>👥 Support Community</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>💬 Anxiety Support</h3>
+                    <p>Join our daily check-in meetings</p>
+                    <button>Join Group</button>
+                </div>
+                <div class="card">
+                    <h3>📚 Recovery Stories</h3>
+                    <p>Read inspiring journeys</p>
+                    <button>Explore Stories</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Success Stories -->
+        <div id="stories" class="section">
+            <h2>🌈 Recovery Journeys</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="story-type">Real Story</div>
+                    <h3>From Addiction to Advocacy 🦸♂️</h3>
+                    <p>"John's 10-year battle with substance abuse turned into a recovery program that's helped 500+ people..."</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="story-type">Therapeutic Fiction</div>
+                    <h3>🎭 The Unexpected Podcast Host</h3>
+                    <p>Eli, a shy librarian, accidentally becomes a viral podcast host using a persona...</p>
+                    <div class="takeaways">
+                        <strong>Key Lessons:</strong>
+                        <ul>
+                            <li>Role-playing as exposure therapy</li>
+                            <li>Finding strength in anonymity</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Daily Quotes -->
+        <div id="quotes" class="section">
+            <h2>💡 Daily Motivation</h2>
+            <div class="card-grid">
+                <div class="card" id="quoteDisplay">
+                    <p id="currentQuote"></p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="quoteProgress"></div>
+                    </div>
+                    <small>Quote 1/5</small>
+                    <button onclick="generateNewQuote()">New Quote 🌈</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crisis Help -->
+        <div id="crisis" class="section">
+            <h2>🆘 Emergency Support</h2>
+            <div class="crisis-section">
+                <div class="helpline-card">
+                    <h3>Vandrevala Foundation</h3>
+                    <div class="helpline-number">
+                        <a href="tel:18602662345">1860 2662 345</a> / 
+                        <a href="tel:18002333330">1800 2333 330</a>
+                    </div>
+                    <p>24/7 Mental Health Support</p>
+                </div>
+                <div class="helpline-card">
+                    <h3>AASRA Suicide Prevention</h3>
+                    <div class="helpline-number">
+                        <a href="tel:9820466726">+91 98204 66726</a>
+                    </div>
+                    <p>24/7 Helpline (English/Hindi)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <script src="mental.js"></script>
+</body>
+</html>

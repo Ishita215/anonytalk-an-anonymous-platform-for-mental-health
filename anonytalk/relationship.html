@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveLens - Complete Relationship Wellness Suite</title>
+    <link rel="stylesheet" href="relationship.css">   
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas class="particles"></canvas>
+    
+    <div class="container">
+        <div class="header">
+            <h1>LoveLens</h1>
+            <p>Relationship Wellness Suite</p>
+        </div>
+
+        <div class="tabs">
+            <div class="tab active" onclick="showSection('insights')">💑 Insights</div>
+            <div class="tab" onclick="showSection('challenges')">🏆 Challenges</div>
+            <div class="tab" onclick="showSection('stories')">📖 Stories</div>
+            <div class="tab" onclick="showSection('quotes')">💬 Quotes</div>
+            <div class="tab" onclick="showSection('bonding')">💞 Bonding</div>
+            <div class="tab" onclick="showSection('tracker')">📊 Tracker</div>
+        </div>
+
+        <!-- Insights Section -->
+        <div id="insights" class="section active">
+            <div class="grid">
+                <div class="card">
+                    <h3>Communication Health</h3>
+                    <div class="progress" style="--value: 75%"></div>
+                    <p>Weekly conversation quality analysis</p>
+                </div>
+                <div class="card">
+                    <h3>Intimacy Spectrum</h3>
+                    <div class="progress" style="--value: 60%"></div>
+                    <p>Emotional & physical connection balance</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Challenges Section -->
+        <div id="challenges" class="section">
+            <div class="grid">
+                <div class="card">
+                    <h3>Daily Connection Challenges</h3>
+                    <ul class="challenges">
+                        <li data-challenge="1">
+                            <span>💬 15-Minute Uninterrupted Talk</span>
+                            <button onclick="toggleChallenge(this)">Start</button>
+                        </li>
+                        <li data-challenge="2">
+                            <span>📵 Digital-Free Dinner Date</span>
+                            <button onclick="toggleChallenge(this)">Start</button>
+                        </li>
+                        <li data-challenge="3">
+                            <span>💌 Write Love Letter</span>
+                            <button onclick="toggleChallenge(this)">Start</button>
+                        </li>
+                        <li data-challenge="4">
+                            <span>🎮 Play a Game Together</span>
+                            <button onclick="toggleChallenge(this)">Start</button>
+                        </li>
+                        <li data-challenge="5">
+                            <span>📸 Create Memory Collage</span>
+                            <button onclick="toggleChallenge(this)">Start</button>
+                        </li>
+                        <li data-challenge="6">
+                            <span>🧘 Couples Meditation</span>
+                            <button onclick="toggleChallenge(this)">Start</button>
+                        </li>
+                        <li data-challenge="7">
+                            <span>🎵 Make Shared Playlist</span>
+                            <button onclick="toggleChallenge(this)">Start</button>
+                        </li>
+                        <li data-challenge="8">
+                            <span>📖 Read Together</span>
+                            <button onclick="toggleChallenge(this)">Start</button>
+                        </li>
+                        <li data-challenge="9">
+                            <span>🍳 Cook New Recipe</span>
+                            <button onclick="toggleChallenge(this)">Start</button>
+                        </li>
+                        <li data-challenge="10">
+                            <span>💆 Mutual Massage</span>
+                            <button onclick="toggleChallenge(this)">Start</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stories Section -->
+        <div id="stories" class="section">
+            <div class="grid">
+                <div class="card">
+                    <h3>Therapeutic Fiction Stories</h3>
+                    <div class="story-card">
+                        <div class="story-type">Long-Distance</div>
+                        <h4>🌉 Bridge of Hearts</h4>
+                        <p>Maya and Rio's weekly video calls across time zones slowly built an unexpected bridge... Through shared playlists and virtual museum tours, they discovered new depths of emotional intimacy.</p>
+                        <div class="takeaways">
+                            <strong>Key Insights:</strong>
+                            <ul>
+                                <li>Quality over quantity in communication</li>
+                                <li>Creating shared experiences digitally</li>
+                                <li>Managing time zone challenges</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="story-card">
+                        <div class="story-type">Healing</div>
+                        <h4>🩹 The Mosaic Heart</h4>
+                        <p>After a painful breakup, Alex embarks on a ceramic art journey. Each broken piece of pottery becomes a metaphor for emotional healing, leading to unexpected connections in the workshop.</p>
+                        <div class="takeaways">
+                            <strong>Healing Aspects:</strong>
+                            <ul>
+                                <li>Art therapy for emotional processing</li>
+                                <li>Rebuilding self-identity</li>
+                                <li>Supportive community importance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quotes Section -->
+        <div id="quotes" class="section">
+            <div class="card">
+                <div class="quote-carousel">
+                    <div id="currentQuote"></div>
+                    <div class="quote-nav">
+                        <button onclick="prevQuote()">Previous</button>
+                        <div id="quoteProgress"></div>
+                        <button onclick="nextQuote()">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bonding Section -->
+        <div id="bonding" class="section">
+            <div class="grid">
+                <div class="card">
+                    <h3>Guided Bonding Exercises</h3>
+                    <div class="video-grid">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/5J6jAC6XxAI" allowfullscreen></iframe>
+                        </div>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/2HdGnqJ3iOw" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tracker Section -->
+        <div id="tracker" class="section">
+            <div class="mood-tracker">
+                <h2>Relationship Pulse</h2>
+                <div class="mood-grid">
+                    <button class="mood-btn" onclick="logMood('❤️')">❤️ Connected</button>
+                    <button class="mood-btn" onclick="logMood('💔')">💔 Strained</button>
+                    <button class="mood-btn" onclick="logMood('🌱')">🌱 Growing</button>
+                    <button class="mood-btn" onclick="logMood('🌟')">🌟 Romantic</button>
+                </div>
+                <div class="calendar" id="calendar"></div>
+            </div>
+        </div>
+    </div>
+    <script src="relationship.js"></script>
+    
+</body>
+</html>

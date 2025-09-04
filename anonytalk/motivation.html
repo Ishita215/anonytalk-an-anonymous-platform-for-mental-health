@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anony Talk | Motivation Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="motivation.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <h3>Anony Talk</h3>
+            <p>Loading motivational content...</p>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Animation -->
+    <div class="background-animation"></div>
+    
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header class="motivation-header">
+        <a href="#" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            Back to Explore
+        </a>
+        <div class="logo">Anony Talk</div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="motivation-hero">
+        <h1>Motivation Hub</h1>
+        <p>Fuel your journey with inspiration, wisdom, and strength</p>
+        <div class="lottie-container">
+            <div class="lottie-placeholder" style="width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-fire" style="font-size: 4rem; color: #ff8a00;"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Daily Quote -->
+    <div class="quote-container">
+        <div class="quote-text" id="quoteText">
+            The only way to do great work is to love what you do. If you haven't found it yet, keep looking. Don't settle.
+        </div>
+        <div class="quote-author" id="quoteAuthor">Steve Jobs</div>
+        <button class="refresh-quote" id="refreshQuote">
+            <i class="fas fa-sync-alt"></i> New Inspiration
+        </button>
+    </div>
+
+    <!-- 3D Cube Gallery -->
+    <div class="section-title">
+        <h2>Visual Inspiration</h2>
+        <p>Explore motivational imagery in our interactive 3D cube</p>
+    </div>
+    
+    <div class="cube-container">
+        <div class="cube" id="motivationCube">
+            <div class="cube-face cube-face--front"><span>Rise Above Challenges</span></div>
+            <div class="cube-face cube-face--back"><span>Find Your Inner Strength</span></div>
+            <div class="cube-face cube-face--right"><span>Embrace the Journey</span></div>
+            <div class="cube-face cube-face--left"><span>Believe in Yourself</span></div>
+            <div class="cube-face cube-face--top"><span>Dream Big</span></div>
+            <div class="cube-face cube-face--bottom"><span>Never Give Up</span></div>
+        </div>
+    </div>
+    
+    <div class="cube-controls">
+        <button class="cube-btn" id="cubeLeft"><i class="fas fa-arrow-left"></i></button>
+        <button class="cube-btn" id="cubeRight"><i class="fas fa-arrow-right"></i></button>
+        <button class="cube-btn" id="cubeUp"><i class="fas fa-arrow-up"></i></button>
+        <button class="cube-btn" id="cubeDown"><i class="fas fa-arrow-down"></i></button>
+    </div>
+
+    <!-- Music Section -->
+    <div class="section-title">
+        <h2>Motivational Music</h2>
+        <p>Powerful songs to energize your spirit and focus your mind</p>
+    </div>
+    
+    <div class="music-section">
+        <div class="music-grid">
+            <div class="music-card">
+                <div class="music-info">
+                    <h3 class="music-title">Aarambh Hai Prachand</h3>
+                    <div class="music-artist">Piyush Mishra</div>
+                    <div class="spotify-player">
+                        <iframe src="https://open.spotify.com/embed/track/6X7d7dZJZmmYrUjGmZvGud?utm_source=generator" 
+                                width="100%" height="80" frameborder="0" allowfullscreen="" 
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="music-card">
+                <div class="music-info">
+                    <h3 class="music-title">Lakshya Ko Har Haal Mein Paana Hai</h3>
+                    <div class="music-artist">KK, Shaan & Shankar Mahadevan</div>
+                    <div class="spotify-player">
+                        <iframe src="https://open.spotify.com/embed/track/1k0EgZ3Z6T3XJhRvf3jJYI?utm_source=generator" 
+                                width="100%" height="80" frameborder="0" allowfullscreen="" 
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="music-card">
+                <div class="music-info">
+                    <h3 class="music-title">Shiv Tandav Stotram</h3>
+                    <div class="music-artist">Traditional</div>
+                    <div class="spotify-player">
+                        <iframe src="https://open.spotify.com/embed/track/6x65eR2Xa3V3zZLHj8Q9Z8?utm_source=generator" 
+                                width="100%" height="80" frameborder="0" allowfullscreen="" 
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="music-card">
+                <div class="music-info">
+                    <h3 class="music-title">Hall of Fame</h3>
+                    <div class="music-artist">The Script ft. will.i.am</div>
+                    <div class="spotify-player">
+                        <iframe src="https://open.spotify.com/embed/track/1k1Bqnv2R0MrJqmpnYq51A?utm_source=generator" 
+                                width="100%" height="80" frameborder="0" allowfullscreen="" 
+                                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Section -->
+    <div class="section-title">
+        <h2>Wisdom & Inspiration</h2>
+        <p>Videos to enlighten your mind and strengthen your spirit</p>
+    </div>
+    
+    <div class="video-section">
+        <div class="video-grid">
+            <div class="video-card" data-video="https://www.youtube.com/embed/jbX4VjX7XU8">
+                <div class="video-thumbnail" style="background-image: url('https://i.ytimg.com/vi/jbX4VjX7XU8/maxresdefault.jpg');">
+                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Sandeep Maheshwari - Life Changing Speech</h3>
+                    <div class="video-category">Motivation</div>
+                </div>
+            </div>
+            
+            <div class="video-card" data-video="https://www.youtube.com/embed/2k9VMw2l7Nk">
+                <div class="video-thumbnail" style="background-image: url('https://i.ytimg.com/vi/2k9VMw2l7Nk/maxresdefault.jpg');">
+                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Lord Krishna's Life Lessons</h3>
+                    <div class="video-category">Spirituality</div>
+                </div>
+            </div>
+            
+            <div class="video-card" data-video="https://www.youtube.com/embed/7CjBOajCSD4">
+                <div class="video-thumbnail" style="background-image: url('https://i.ytimg.com/vi/7CjBOajCSD4/maxresdefault.jpg');">
+                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Gaur Gopal Das - Practical Wisdom</h3>
+                    <div class="video-category">Spirituality</div>
+                </div>
+            </div>
+            
+            <div class="video-card" data-video="https://www.youtube.com/embed/k6_QUhUPrF4">
+                <div class="video-thumbnail" style="background-image: url('https://i.ytimg.com/vi/k6_QUhUPrF4/maxresdefault.jpg');">
+                    <div class="play-icon"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="video-info">
+                    <h3 class="video-title">Tony Robbins - Unleash the Power Within</h3>
+                    <div class="video-category">Motivation</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">×</button>
+            <iframe class="modal-video" id="modalVideo" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Anony Talk</div>
+            <p>A sanctuary for inspiration, growth, and mental wellness</p>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 Anony Talk. All rights reserved. Privacy Policy | Terms of Service
+            </div>
+        </div>
+    </footer>
+    <script src="motivation.js"></script>
+   
+</body>
+</html>

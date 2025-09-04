@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnonyTalk Customization</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="customize.css">
+</head>
+<body class="flex items-center justify-center min-h-screen">
+
+    <div class="bubbles-container"></div> <!-- Bubbles Animation -->
+
+    <div class="glass w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center mb-6">Customize Your Experience</h1>
+
+        <div class="mb-4">
+            <label class="block text-sm font-medium mb-2">Edit Username</label>
+            <input type="text" id="username" class="block w-full p-2 border border-gray-300 rounded" placeholder="Enter your name">
+        </div>
+
+        <div class="mb-4">
+            <label class="block text-sm font-medium mb-2">Profile Picture</label>
+            <input type="file" id="profilePicture" class="block w-full p-2 border border-gray-300 rounded">
+        </div>
+
+        <div class="mb-4">
+            <label class="block text-sm font-medium mb-2">Set Status</label>
+            <input type="text" id="status" class="block w-full p-2 border border-gray-300 rounded" placeholder="What's on your mind?">
+        </div>
+
+        <div class="mb-4">
+            <label class="block text-sm font-medium mb-2">Font Size Adjustment</label>
+            <select id="fontSize" class="block w-full p-2 border border-gray-300 rounded">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <label class="block text-sm font-medium mb-2">Chat Preferences</label>
+            <div class="flex items-center mb-2">
+                <input type="checkbox" id="animations" class="mr-2">
+                <label for="animations" class="text-sm">Enable Animations</label>
+            </div>
+            <div class="flex items-center mb-2">
+                <input type="checkbox" id="message-formatting" class="mr-2">
+                <label for="message-formatting" class="text-sm">Enable Message Formatting</label>
+            </div>
+        </div>
+
+        <div class="flex justify-between mt-6">
+            <button id="backBtn" class="btn bg-gray-300 text-gray-800 px-4 py-2 rounded hover:bg-gray-400 transition">Back</button>
+            <button id="saveBtn" class="btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Save</button>
+        </div>
+    </div>
+
+    <script src="customize.js"></script>
+</body>
+</html>

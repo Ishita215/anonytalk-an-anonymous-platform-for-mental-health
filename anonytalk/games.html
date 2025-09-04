@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anony Talk | Cosmic Mind Relaxing Games</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <link rel="stylesheet" href="games.css">
+</head>
+<body>
+  <div id="cosmicCanvas"></div>
+  
+  <div class="header">
+    <h1>Anony Talk | Cosmic Relaxation</h1>
+    <p class="subtitle">Journey through cosmic tranquility with our mind-relaxing games. Find your inner peace among the stars.</p>
+  </div>
+
+  <div class="games-container">
+    <div class="game-card" data-game="breathing">
+      <div class="game-icon">🌀</div>
+      <h2>Cosmic Breathing</h2>
+      <p>Align your breath with the rhythm of the universe</p>
+    </div>
+    
+    <div class="game-card" data-game="memory">
+      <div class="game-icon">✨</div>
+      <h2>Stellar Memory</h2>
+      <p>Match cosmic patterns to unlock universal wisdom</p>
+    </div>
+    
+    <div class="game-card" data-game="color">
+      <div class="game-icon">🎨</div>
+      <h2>Nebula Colors</h2>
+      <p>Create breathtaking nebulas with your touch</p>
+    </div>
+    
+    <div class="game-card" data-game="focus">
+      <div class="game-icon">⏳</div>
+      <h2>Galactic Focus</h2>
+      <p>Harness time with cosmic Pomodoro technique</p>
+    </div>
+  </div>
+
+  <!-- Breathing Modal -->
+  <div class="modal" id="breathing">
+    <div class="modal-content">
+      <h2>COSMIC BREATHING EXERCISE</h2>
+      <div class="breathing-container">
+        <div class="breathing-circle" id="breathCircle">Breathe</div>
+        <div class="breathing-controls">
+          <button class="control-btn" id="startBreathing">Start</button>
+          <button class="control-btn" id="pauseBreathing">Pause</button>
+          <button class="control-btn" id="resetBreathing">Reset</button>
+        </div>
+        <div class="speed-control">
+          <label for="breathSpeed">Breathing Speed: <span id="speedValue">4s</span></label>
+          <input type="range" id="breathSpeed" min="2" max="8" value="4" step="0.5">
+        </div>
+      </div>
+      <button class="close-btn">Back to Cosmos</button>
+    </div>
+  </div>
+
+  <!-- Memory Modal -->
+  <div class="modal" id="memory">
+    <div class="modal-content">
+      <h2>STELLAR MEMORY GAME</h2>
+      <p>Match the cosmic symbols to clear the board</p>
+      <div class="memory-grid" id="memoryGrid"></div>
+      <div class="score">Matches: <span id="matchCount">0</span>/8</div>
+      <button class="close-btn">Back to Cosmos</button>
+    </div>
+  </div>
+
+  <!-- Color Modal -->
+  <div class="modal" id="color">
+    <div class="modal-content">
+      <h2>NEBULA COLOR THERAPY</h2>
+      <p>Click and drag to create your cosmic masterpiece</p>
+      <canvas id="colorCanvas" width="500" height="400"></canvas>
+      <div class="color-controls">
+        <button id="clearCanvas" class="control-btn">New Universe</button>
+      </div>
+      <button class="close-btn">Back to Cosmos</button>
+    </div>
+  </div>
+
+  <!-- Focus Modal -->
+  <div class="modal" id="focus">
+    <div class="modal-content">
+      <h2>GALACTIC FOCUS TIMER</h2>
+      <div class="timer-container">
+        <div class="timer-display" id="timerDisplay">25:00</div>
+        <div class="timer-controls">
+          <button class="timer-btn start" id="startTimer">Start</button>
+          <button class="timer-btn" id="pauseTimer">Pause</button>
+          <button class="timer-btn reset" id="resetTimer">Reset</button>
+        </div>
+        <div class="timer-mode">
+          <button class="mode-btn active" data-mode="work">Work</button>
+          <button class="mode-btn" data-mode="shortBreak">Short Break</button>
+          <button class="mode-btn" data-mode="longBreak">Long Break</button>
+        </div>
+      </div>
+      <button class="close-btn">Back to Cosmos</button>
+    </div>
+  </div>
+
+   <script src="games.js"></script>
+</body>
+</html>

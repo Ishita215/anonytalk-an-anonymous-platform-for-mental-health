@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Space - Complete Wellness Hub</title>
+    <link rel="stylesheet" href="depressed.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🌿 Mindful Space - Complete Wellness Hub</h1>
+        
+        <div class="tabs">
+            <div class="tab active" onclick="showSection('stories')">📖 Success Stories</div>
+            <div class="tab" onclick="showSection('fictional')">✨ Fictional Healing</div>
+            <div class="tab" onclick="showSection('quotes')">💬 Daily Quotes</div>
+            <div class="tab" onclick="showSection('videos')">🧘 Guided Sessions</div>
+            <div class="tab" onclick="showSection('challenges')">🏆 Challenges</div>
+            <div class="tab" onclick="showSection('mood')">😊 Mood Tracker</div>
+            <div class="tab" onclick="showSection('community')">👥 Community</div>
+        </div>
+
+        <!-- Success Stories Section -->
+        <div id="stories" class="section active">
+            <h2>🌈 Real-Life Recovery Journeys</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>From Addiction to Advocacy 🦸♂️</h3>
+                    <p>"John's 10-year battle with substance abuse turned into a recovery program that's helped 500+ people..."</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                    <small>10 year recovery</small>
+                </div>
+                <div class="card">
+                    <h3>Surviving Suicide Attempts 💪</h3>
+                    <p>"Maria's journey through crisis intervention to becoming a mental health first aid instructor..."</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%"></div>
+                    </div>
+                    <small>7 year journey</small>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fictional Stories Section -->
+        <div id="fictional" class="section">
+            <h2>📚 Therapeutic Fiction Stories</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="story-type">Social Anxiety</div>
+                    <h3>🎭 The Unexpected Podcast Host</h3>
+                    <p>Eli, a shy librarian, accidentally becomes a viral podcast host using a persona. Through anonymous storytelling, he develops confidence to embrace his true self.</p>
+                    <div class="takeaways">
+                        <strong>Key Lessons:</strong>
+                        <ul>
+                            <li>Role-playing as exposure therapy</li>
+                            <li>Finding strength in anonymity</li>
+                            <li>Gradual self-acceptance process</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="story-type">Burnout Recovery</div>
+                    <h3>🏖️ The CEO's Sabbatical</h3>
+                    <p>Tech mogul Amanda rediscovers life through a 3-month digital detox in Bali, learning mindfulness from local fishermen.</p>
+                    <div class="takeaways">
+                        <strong>Healing Aspects:</strong>
+                        <ul>
+                            <li>Digital detox benefits</li>
+                            <li>Cultural immersion therapy</li>
+                            <li>Reconnecting with nature</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quotes Section -->
+        <div id="quotes" class="section">
+            <h2>💡 Daily Motivation</h2>
+            <div class="card-grid">
+                <div class="card" id="quoteDisplay">
+                    <p id="currentQuote"></p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="quoteProgress"></div>
+                    </div>
+                    <small>Quote 1/5</small>
+                    <button onclick="generateNewQuote()">New Quote 🌈</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guided Sessions -->
+        <div id="videos" class="section">
+            <h2>🧘 Wellness Practices</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>💙 Healing Sessions</h3>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/xShv7mMmfW4" frameborder="0" allowfullscreen></iframe>
+                    <h4>A 20-minute mindfulness meditation designed to alleviate depression and anxiety, incorporating guided imagery for deep relaxation.</h4>
+                </div>
+                
+                <div class="card">
+                    <h3>🌿 Mind Renewal</h3>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/tiAfUrU9Pvg" frameborder="0" allowfullscreen></iframe>
+                    <h4>A 10-minute guided morning meditation to restore mental clarity and refresh your mind for the day ahead.</h4>
+                </div>
+                
+                <div class="card">
+                    <h3>🧘 Calm Therapy</h3>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/2HdGnqJ3iOw" frameborder="0" allowfullscreen></iframe>
+                    <h4>A deeply relaxing guided meditation aimed at managing depression, stress, and anxiety, promoting positive thinking and inner peace.</h4>
+                </div>
+                
+                <div class="card">
+                    <h3>☀️ Uplift Practice</h3>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/jReMPtf5u7s" frameborder="0" allowfullscreen></iframe>
+                    <h4>An uplifting meditation session focusing on positive thinking and relaxation to elevate mood and reduce stress.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🌊 Serenity Guide</h3>
+                    <iframe width="100%" height="200" src="https://www.youtube.com/embed/1HxA2mlPSkY" frameborder="0" allowfullscreen></iframe>
+                    <p>A 20-minute guided meditation to cultivate serenity, using visualization and mindfulness techniques for deep calm.</p>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Challenges Section -->
+        <div id="challenges" class="section">
+            <h2>🏅 Daily Wellness Challenges</h2>
+            <div class="card-grid">
+                <div class="challenge-item">
+                    <span>🌬️ 5-Minute Box Breathing</span>
+                    <button onclick="toggleChallenge(this)">Mark Complete</button>
+                </div>
+                <div class="challenge-item">
+                    <span>💧 Drink 8 Glasses Water</span>
+                    <button onclick="toggleChallenge(this)">Mark Complete</button>
+                </div>
+                <div class="challenge-item">
+                    <span>📝 Gratitude Journaling</span>
+                    <button onclick="toggleChallenge(this)">Mark Complete</button>
+                </div>
+                <div class="challenge-item">
+                    <span>📵 1-Hour Digital Detox</span>
+                    <button onclick="toggleChallenge(this)">Mark Complete</button>
+                </div>
+                <div class="challenge-item">
+                    <span>🚶♀️ 30-Min Nature Walk</span>
+                    <button onclick="toggleChallenge(this)">Mark Complete</button>
+                </div>
+                <div class="challenge-item">
+                    <span>💖 Compliment Someone</span>
+                    <button onclick="toggleChallenge(this)">Mark Complete</button>
+                </div>
+                <div class="challenge-item">
+                    <span>🧘♂️ Muscle Relaxation</span>
+                    <button onclick="toggleChallenge(this)">Mark Complete</button>
+                </div>
+                <div class="challenge-item">
+                    <span>🎵 Uplifting Music Session</span>
+                    <button onclick="toggleChallenge(this)">Mark Complete</button>
+                </div>
+                <div class="challenge-item">
+                    <span>🥗 Nutrient-Rich Meal</span>
+                    <button onclick="toggleChallenge(this)">Mark Complete</button>
+                </div>
+                <div class="challenge-item">
+                    <span>💤 8-Hour Sleep Goal</span>
+                    <button onclick="toggleChallenge(this)">Mark Complete</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mood Tracker -->
+        <div id="mood" class="section">
+            <h2>📅 Mood Calendar</h2>
+            <div class="mood-tracker">
+                <div class="mood-emoji-picker">
+                    <button class="emoji-btn" onclick="logMood('😊')">😊</button>
+                    <button class="emoji-btn" onclick="logMood('😐')">😐</button>
+                    <button class="emoji-btn" onclick="logMood('😞')">😞</button>
+                </div>
+                <div class="mood-calendar" id="moodCalendar"></div>
+            </div>
+        </div>
+
+        <!-- Community Section -->
+        <div id="community" class="section">
+            <h2>👥 Shared Experiences</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Anxiety Support Group</h3>
+                    <p>Join our weekly virtual meetups every Thursday 7PM</p>
+                    <button>Join Meeting 💬</button>
+                </div>
+                <div class="card">
+                    <h3>Recovery Forum</h3>
+                    <p>Share your journey and connect with others</p>
+                    <button>Visit Forum 🌐</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="depressed.js"></script>
+</body>
+</html>

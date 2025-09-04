@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Your Avatar</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="avatar.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Choose Your Animated Avatar</h1>
+        <div class="avatar-container">
+            <div class="avatar" onclick="selectAvatar('avatar1')">
+                <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" alt="Avatar 1">
+            </div>
+            <div class="avatar" onclick="selectAvatar('avatar2')">
+                <img src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif" alt="Avatar 2">
+            </div>
+            <div class="avatar" onclick="selectAvatar('avatar3')">
+                <img src="https://media.giphy.com/media/l4pTfx2qLszoacZRS/giphy.gif" alt="Avatar 3">
+            </div>
+            <div class="avatar" onclick="selectAvatar('avatar4')">
+                <img src="https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif" alt="Avatar 4">
+            </div>
+        </div>
+        <button class="save-btn" onclick="saveAvatar()">Save Avatar</button>
+    </div>
+
+    <script src="avatar.js"></script>
+</body>
+</html>

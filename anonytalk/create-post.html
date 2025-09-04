@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Post</title>
+  <link rel="stylesheet" href="create-post.css" />
+</head>
+<body>
+  
+
+  <form class="form" onsubmit="event.preventDefault(); submitPost();">
+    <h2>Share Something</h2>
+    <div id="emojiPreview">✨</div>
+
+    <select id="category" required>
+      <option value="" hidden>Select Category</option>
+      <option value="Breakup">💔 Breakup</option>
+      <option value="Healing">🌿 Healing</option>
+      <option value="Motivation">🌟 Motivation</option>
+    </select>
+
+    <select id="emoji" required>
+      <option value="" hidden>Select Emotion</option>
+      <option value="😊">😊 Happy</option>
+      <option value="😢">😢 Sad</option>
+      <option value="🌱">🌱 Healing</option>
+    </select>
+
+    <input type="text" id="title" placeholder="Post Title" required />
+    <textarea id="content" placeholder="Write your story here…" required></textarea>
+
+    <button type="submit">Post</button>
+  </form>
+
+  <!-- Particle Container -->
+  <div id="particles"></div>
+
+  <script src="create-post.js"></script>
+</body>
+</html>

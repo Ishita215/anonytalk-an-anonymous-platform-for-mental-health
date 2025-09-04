@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AnonyTalk Communication</title>
+  <link rel="stylesheet" href="social-space.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AnonyTalk Communication</h1>
+    
+    <!-- Tab Navigation -->
+    <div class="tabs">
+      <button class="tab active" data-tab="chat">
+        <i class="fas fa-comments"></i> Real-time Chat
+      </button>
+      <button class="tab" data-tab="discussions">
+        <i class="fas fa-comment-dots"></i> Community Discussions
+      </button>
+      <button class="tab" data-tab="connections">
+        <i class="fas fa-users"></i> User Connections
+      </button>
+      <button class="tab" data-tab="announcements">
+        <i class="fas fa-bullhorn"></i> Announcements
+      </button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="content">
+      <!-- Chat Tab -->
+      <div class="tab-content active" id="chat">
+        <div class="card-grid">
+          <div class="card">
+            <h3>General Chat</h3>
+            <p>Connect with others in real-time.</p>
+            <button class="btn">Join Now</button>
+          </div>
+          <div class="card">
+            <h3>Support Room</h3>
+            <p>Get help from the community.</p>
+            <button class="btn">Join Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Discussions Tab -->
+      <div class="tab-content" id="discussions">
+        <div class="card">
+          <h3>Topic: Platform Updates</h3>
+          <p>What do you think of the new features?</p>
+          <button class="link-btn">View Thread</button>
+        </div>
+      </div>
+
+      <!-- Connections Tab -->
+      <div class="tab-content" id="connections">
+        <div class="card-grid">
+          <div class="card user-card">
+            <div class="avatar"></div>
+            <div class="user-info">
+              <h3>User123</h3>
+              <p class="online">Online</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Announcements Tab -->
+      <div class="tab-content" id="announcements">
+        <div class="card">
+          <h3>Welcome to AnonyTalk!</h3>
+          <p>We’re live as of March 27, 2025.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="social-space.js"></script>
+</body>
+</html>

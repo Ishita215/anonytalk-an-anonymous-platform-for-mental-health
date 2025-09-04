@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anony Talk | Wellness Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="excercise.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <h3>Anony Talk</h3>
+            <p>Loading wellness resources...</p>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Animation -->
+    <div class="background-animation"></div>
+    
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Music Control -->
+    <div class="music-control">
+        <span class="music-status">Music Off</span>
+        <button class="music-btn" id="musicToggle">
+            <i class="fas fa-play"></i>
+        </button>
+    </div>
+    
+    <audio id="backgroundMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-16.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Header -->
+    <header class="wellness-header">
+        <a href="#" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            Back to Explore
+        </a>
+        <div class="logo">Anony Talk</div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="wellness-hero">
+        <h1>Wellness & Eye Care Hub</h1>
+        <p>Relax your mind, strengthen your body, and care for your eyes</p>
+        <div class="lottie-container">
+            <div class="lottie-placeholder" style="width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-eye" style="font-size: 4rem; color: #6ae0d9;"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Eye Exercise Section -->
+    <div class="eye-exercise-section">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Eye Relaxation Exercise</h2>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; color: var(--text-muted); line-height: 1.6;">
+            Follow the moving dot with your eyes for 1-2 minutes. This exercise helps relieve eye strain from screen time and improves focus.
+        </p>
+        
+        <div class="eye-exercise-container">
+            <div class="eye-dot" id="eyeDot"></div>
+        </div>
+        
+        <div class="exercise-controls">
+            <button class="control-btn" id="startExercise">
+                <i class="fas fa-play"></i> Start Exercise
+            </button>
+            <button class="control-btn" id="stopExercise">
+                <i class="fas fa-stop"></i> Stop
+            </button>
+            <button class="control-btn" id="resetExercise">
+                <i class="fas fa-redo"></i> Reset
+            </button>
+        </div>
+        
+        <div class="timer" id="exerciseTimer">Duration: 00:00</div>
+    </div>
+
+    <!-- Wellness Cards -->
+    <div class="wellness-grid">
+        <div class="wellness-card">
+            <div class="wellness-icon">
+                <i class="fas fa-spa"></i>
+            </div>
+            <h3>Mindful Breathing</h3>
+            <p>Practice deep breathing exercises to reduce stress and improve mental clarity.</p>
+        </div>
+        
+        <div class="wellness-card">
+            <div class="wellness-icon">
+                <i class="fas fa-moon"></i>
+            </div>
+            <h3>Sleep Hygiene</h3>
+            <p>Improve your sleep quality with our scientifically-backed sleep techniques.</p>
+        </div>
+        
+        <div class="wellness-card">
+            <div class="wellness-icon">
+                <i class="fas fa-water"></i>
+            </div>
+            <h3>Hydration Reminder</h3>
+            <p>Stay hydrated throughout the day for better physical and mental performance.</p>
+        </div>
+    </div>
+
+    <!-- Relaxation Section -->
+    <div class="relaxation-section">
+        <h2 style="font-size: 2.5rem; margin-bottom: 20px; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Relaxation Techniques</h2>
+        <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; color: var(--text-muted); line-height: 1.6;">
+            Discover techniques to calm your mind and reduce stress
+        </p>
+        
+        <div class="relaxation-container">
+            <div class="relaxation-card">
+                <div class="relaxation-image" style="background-image: url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <h3>Guided Meditation</h3>
+                <p>10-minute sessions to clear your mind and reduce anxiety.</p>
+                <button class="control-btn">
+                    <i class="fas fa-headphones"></i> Listen Now
+                </button>
+            </div>
+            
+            <div class="relaxation-card">
+                <div class="relaxation-image" style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <h3>Yoga for Relaxation</h3>
+                <p>Gentle yoga sequences to release tension and improve flexibility.</p>
+                <button class="control-btn">
+                    <i class="fas fa-play-circle"></i> Start Session
+                </button>
+            </div>
+            
+            <div class="relaxation-card">
+                <div class="relaxation-image" style="background-image: url('https://images.unsplash.com/photo-1511376777868-611b54f68947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
+                <h3>Nature Sounds</h3>
+                <p>Soothing sounds of nature to help you relax and focus.</p>
+                <button class="control-btn">
+                    <i class="fas fa-music"></i> Play Sounds
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Anony Talk</div>
+            <p>A sanctuary for physical and mental wellness</p>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 Anony Talk. All rights reserved. Privacy Policy | Terms of Service
+            </div>
+        </div>
+    </footer>
+    
+     <script src="exercise.js"></script>
+</body>
+</html>

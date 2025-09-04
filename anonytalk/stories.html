@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anony Talk | Stories & Experiences</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="stories.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <h3>Anony Talk</h3>
+            <p>Loading stories and experiences...</p>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Header -->
+    <header class="stories-header">
+        <a href="#" class="back-button">
+            <i class="fas fa-arrow-left"></i>
+            Back to Explore
+        </a>
+        <div class="logo">Anony Talk</div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="stories-hero">
+        <h1>Stories & Experiences</h1>
+        <p>Journey through fictional tales and relatable experiences shared by our community</p>
+        <div class="hero-scroll">
+            <i class="fas fa-chevron-down"></i>
+            <span>Scroll to explore</span>
+        </div>
+    </div>
+
+    <!-- Cube Navigation -->
+    <div class="cube-container">
+        <div class="cube-scene">
+            <div class="cube" id="storyCube">
+                <div class="cube-face active" data-target="fictional-stories">
+                    <i class="fas fa-book-open"></i>
+                    <span>Fictional Stories</span>
+                </div>
+                <div class="cube-face" data-target="real-experiences">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Real Experiences</span>
+                </div>
+                <div class="cube-face" data-target="video-stories">
+                    <i class="fas fa-film"></i>
+                    <span>Video Stories</span>
+                </div>
+                <div class="cube-face" data-target="poetry-prose">
+                    <i class="fas fa-feather-alt"></i>
+                    <span>Poetry & Prose</span>
+                </div>
+                <div class="cube-face" data-target="fictional-stories">
+                    <i class="fas fa-book-open"></i>
+                    <span>Fictional Stories</span>
+                </div>
+                <div class="cube-face" data-target="real-experiences">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Real Experiences</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cube-controls">
+            <div class="cube-btn" data-rotate="left">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+            <div class="cube-btn" data-rotate="right">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="cube-btn" data-rotate="up">
+                <i class="fas fa-arrow-up"></i>
+            </div>
+            <div class="cube-btn" data-rotate="down">
+                <i class="fas fa-arrow-down"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stories Container -->
+    <div class="stories-container">
+        <!-- Fictional Stories -->
+        <section id="fictional-stories" class="story-section">
+            <div class="section-title">
+                <h2>Fictional Stories</h2>
+                <p>Imaginative tales crafted by our talented community members</p>
+            </div>
+            
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-image" style="background-image: url('https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+                        <div class="story-category">Fantasy</div>
+                    </div>
+                    <div class="story-content">
+                        <h3>The Last Lightkeeper</h3>
+                        <p>In a world where darkness is consuming everything, a lone lightkeeper holds the last beacon of hope against the shadows.</p>
+                        <div class="story-meta">
+                            <div class="author">
+                                <div class="author-avatar">J</div>
+                                <div class="author-info">
+                                    <h4>Jamie L.</h4>
+                                    <span>Community Writer</span>
+                                </div>
+                            </div>
+                            <div class="read-time">
+                                <i class="fas fa-book-open"></i> 12 min
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-image" style="background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+                        <div class="story-category">Adventure</div>
+                    </div>
+                    <div class="story-content">
+                        <h3>Road to Nowhere</h3>
+                        <p>A cross-country road trip turns into a journey of self-discovery when three friends find themselves lost in the American Southwest.</p>
+                        <div class="story-meta">
+                            <div class="author">
+                                <div class="author-avatar">M</div>
+                                <div class="author-info">
+                                    <h4>Marcus T.</h4>
+                                    <span>Travel Writer</span>
+                                </div>
+                            </div>
+                            <div class="read-time">
+                                <i class="fas fa-book-open"></i> 18 min
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-image" style="background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+                        <div class="story-category">Sci-Fi</div>
+                    </div>
+                    <div class="story-content">
+                        <h3>Echoes of Tomorrow</h3>
+                        <p>In 2150, a time-travel researcher discovers messages from her future self that could change the course of humanity.</p>
+                        <div class="story-meta">
+                            <div class="author">
+                                <div class="author-avatar">S</div>
+                                <div class="author-info">
+                                    <h4>Sarah K.</h4>
+                                    <span>Science Fiction</span>
+                                </div>
+                            </div>
+                            <div class="read-time">
+                                <i class="fas fa-book-open"></i> 22 min
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real Experiences -->
+        <section id="real-experiences" class="story-section">
+            <div class="section-title">
+                <h2>Real Experiences</h2>
+                <p>Authentic stories from people navigating life's challenges</p>
+            </div>
+            
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-image" style="background-image: url('https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+                        <div class="story-category">Personal Growth</div>
+                    </div>
+                    <div class="story-content">
+                        <h3>Finding My Way Back</h3>
+                        <p>After years of battling depression, I discovered the healing power of nature and community support.</p>
+                        <div class="story-meta">
+                            <div class="author">
+                                <div class="author-avatar">A</div>
+                                <div class="author-info">
+                                    <h4>Anonymous</h4>
+                                    <span>Shared Experience</span>
+                                </div>
+                            </div>
+                            <div class="read-time">
+                                <i class="fas fa-book-open"></i> 8 min
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-image" style="background-image: url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+                        <div class="story-category">Relationships</div>
+                    </div>
+                    <div class="story-content">
+                        <h3>Learning to Love Again</h3>
+                        <p>How I rebuilt trust and found love after a devastating heartbreak that left me shattered for years.</p>
+                        <div class="story-meta">
+                            <div class="author">
+                                <div class="author-avatar">R</div>
+                                <div class="author-info">
+                                    <h4>Anonymous</h4>
+                                    <span>Shared Experience</span>
+                                </div>
+                            </div>
+                            <div class="read-time">
+                                <i class="fas fa-book-open"></i> 10 min
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-image" style="background-image: url('https://images.unsplash.com/photo-1558021211-6d1403321394?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+                        <div class="story-category">Recovery</div>
+                    </div>
+                    <div class="story-content">
+                        <h3>My Sobriety Journey</h3>
+                        <p>One year alcohol-free: The struggles, triumphs, and lessons learned along the way to reclaiming my life.</p>
+                        <div class="story-meta">
+                            <div class="author">
+                                <div class="author-avatar">T</div>
+                                <div class="author-info">
+                                    <h4>Anonymous</h4>
+                                    <span>Shared Experience</span>
+                                </div>
+                            </div>
+                            <div class="read-time">
+                                <i class="fas fa-book-open"></i> 15 min
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Stories -->
+        <section id="video-stories" class="story-section">
+            <div class="section-title">
+                <h2>Video Stories</h2>
+                <p>Powerful narratives told through visual experiences</p>
+            </div>
+            
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-image" style="background-image: url('https://images.unsplash.com/photo-1574717024453-354056aafa98?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+                        <div class="story-category">Animation</div>
+                        <div class="play-icon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(0, 0, 0, 0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <h3>Voices Unheard</h3>
+                        <p>An animated journey through the mind of someone struggling with social anxiety and finding their voice.</p>
+                        <div class="story-meta">
+                            <div class="author">
+                                <div class="author-avatar">V</div>
+                                <div class="author-info">
+                                    <h4>Visual Stories</h4>
+                                    <span>Animation</span>
+                                </div>
+                            </div>
+                            <div class="read-time">
+                                <i class="fas fa-play-circle"></i> 6 min
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-image" style="background-image: url('https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+                        <div class="story-category">Documentary</div>
+                        <div class="play-icon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(0, 0, 0, 0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <h3>Breaking the Silence</h3>
+                        <p>A documentary exploring mental health stigma in different cultures and communities around the world.</p>
+                        <div class="story-meta">
+                            <div class="author">
+                                <div class="author-avatar">D</div>
+                                <div class="author-info">
+                                    <h4>DocuStories</h4>
+                                    <span>Documentary</span>
+                                </div>
+                            </div>
+                            <div class="read-time">
+                                <i class="fas fa-play-circle"></i> 22 min
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-image" style="background-image: url('https://images.unsplash.com/photo-1551818255-e6e10975bc17?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+                        <div class="story-category">Interview</div>
+                        <div class="play-icon" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: rgba(0, 0, 0, 0.7); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                            <i class="fas fa-play"></i>
+                        </div>
+                    </div>
+                    <div class="story-content">
+                        <h3>Warriors of Hope</h3>
+                        <p>Inspiring interviews with survivors who turned their trauma into advocacy and community support.</p>
+                        <div class="story-meta">
+                            <div class="author">
+                                <div class="author-avatar">I</div>
+                                <div class="author-info">
+                                    <h4>Interview Series</h4>
+                                    <span>Conversations</span>
+                                </div>
+                            </div>
+                            <div class="read-time">
+                                <i class="fas fa-play-circle"></i> 15 min
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Poetry & Prose -->
+        <section id="poetry-prose" class="story-section">
+            <div class="section-title">
+                <h2>Poetry & Prose</h2>
+                <p>Emotional expressions through the art of words</p>
+            </div>
+            
+            <div class="stories-grid">
+                <div class="story-card">
+                    <div class="story-image" style="background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+                        <div class="story-category">Poetry</div>
+                    </div>
+                    <div class="story-content">
+                        <h3>Whispers in the Dark</h3>
+                        <p>A collection of poems exploring the journey from despair to hope, from loneliness to connection.</p>
+                        <div class="story-meta">
+                            <div class="author">
+                                <div class="author-avatar">P</div>
+                                <div class="author-info">
+                                    <h4>Poet's Corner</h4>
+                                    <span>Poetry Collection</span>
+                                </div>
+                            </div>
+                            <div class="read-time">
+                                <i class="fas fa-book-open"></i> 7 min
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-image" style="background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+                        <div class="story-category">Prose</div>
+                    </div>
+                    <div class="story-content">
+                        <h3>Fragments of a Healing Heart</h3>
+                        <p>Short prose pieces capturing moments of vulnerability, strength, and self-discovery in everyday life.</p>
+                        <div class="story-meta">
+                            <div class="author">
+                                <div class="author-avatar">W</div>
+                                <div class="author-info">
+                                    <h4>Wordsmith</h4>
+                                    <span>Prose Collection</span>
+                                </div>
+                            </div>
+                            <div class="read-time">
+                                <i class="fas fa-book-open"></i> 9 min
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="story-image" style="background-image: url('https://images.unsplash.com/photo-1495640388908-05fa85288e61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');">
+                        <div class="story-category">Haiku</div>
+                    </div>
+                    <div class="story-content">
+                        <h3>Seasons of the Soul</h3>
+                        <p>Haiku poetry capturing the essence of emotional landscapes through nature's changing seasons.</p>
+                        <div class="story-meta">
+                            <div class="author">
+                                <div class="author-avatar">H</div>
+                                <div class="author-info">
+                                    <h4>Haiku Master</h4>
+                                    <span>Poetry Collection</span>
+                                </div>
+                            </div>
+                            <div class="read-time">
+                                <i class="fas fa-book-open"></i> 5 min
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community Section -->
+        <div class="community-section">
+            <h2>Join Our Storytelling Community</h2>
+            <p>Share your experiences, connect with others, and find inspiration in a safe, supportive environment.</p>
+            <button class="share-btn"><i class="fas fa-users"></i> Join Community</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Anony Talk</div>
+            <p>A sanctuary for sharing, healing, and finding inspiration</p>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 Anony Talk. All rights reserved. Privacy Policy | Terms of Service
+            </div>
+        </div>
+    </footer>
+     <script src="stories.js"></script>
+ 
+</body>
+</html>

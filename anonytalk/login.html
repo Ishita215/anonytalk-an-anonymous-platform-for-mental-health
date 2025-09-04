@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnonyTalk - Secure Portal</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <!-- Registration Form -->
+            <form id="registerForm" class="glass-form active">
+                <div class="auth-header">
+                    <i class="fas fa-user-secret auth-icon"></i>
+                    <h2>Create Anonymous Identity</h2>
+                </div>
+                <input type="text" placeholder="Unique Identifier" required>
+                <input type="password" placeholder="Encryption Key" required>
+                <button type="button" onclick="handleRegister()">Generate Identity</button>
+                <div class="switch-form">
+                    Existing entity? <span onclick="toggleForms()">Activate Key</span>
+                </div>
+            </form>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="glass-form">
+                <div class="auth-header">
+                    <i class="fas fa-fingerprint auth-icon"></i>
+                    <h2>Access Secure Channel</h2>
+                </div>
+                <input type="text" placeholder="Anonymous ID" required>
+                <input type="password" placeholder="Verification Code" required>
+                <button type="button" onclick="handleLogin()">Decrypt & Enter</button>
+                <div class="switch-form">
+                    New user? <span onclick="toggleForms()">Initialize Protocol</span>
+                </div>
+            </form>
+        </div>
+        <div class="status-message" id="statusMessage"></div>
+    </div>
+
+    <script src="login.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

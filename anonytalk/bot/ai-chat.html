@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot UI</title>
+    <link rel="stylesheet" href="aiChat.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h2>🤖 Your Buddy - AI Chatbot</h2>
+            <p>Chat anonymously with your AI friend</p>
+        </div>
+        <div class="chat-box" id="messages">
+            <p class="message bot-message">Welcome! How can I assist you today?</p>
+        </div>
+        <div class="input-container">
+            <input type="text" id="userInput" class="chat-input" placeholder="Type a message...">
+            <button class="send-button" onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="chatbotResponses.js"></script>
+    <script src="aiChat.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit Anony Profile</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+
+  <div class="profile-wrapper">
+    <div class="top-avatar">
+      <img id="selectedAvatar" src="https://api.dicebear.com/9.x/adventurer/svg?seed=Kingston" alt="Avatar" />
+      <h2 id="previewName">Your Nickname</h2>
+    </div>
+
+    <div class="profile-form">
+      <div class="form-group avatar-choices">
+        <p>Choose your vibe face 😎</p>
+        <div class="avatars">
+          <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Kingston" onclick="selectAvatar(this)">
+          <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Mason" onclick="selectAvatar(this)">
+          <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Eliza" onclick="selectAvatar(this)">
+          <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Eden" onclick="selectAvatar(this)">
+          <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Christian" onclick="selectAvatar(this)">
+          <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=Jocelyn" onclick="selectAvatar(this)">
+          <img src="https://api.dicebear.com/9.x/adventurer/svg?seed=George" onclick="selectAvatar(this)">
+        </div>
+      </div>
+
+      <div class="form-group centered-nickname">
+        <input type="text" id="nickname" placeholder="Nickname..." oninput="updateNamePreview()" />
+      </div>
+
+      <div class="form-group">
+        <select id="mood">
+          <option value="">Mood check?</option>
+          <option>😎 Chill</option>
+          <option>💀 Dead Inside</option>
+          <option>🧠 Overthinking</option>
+          <option>✨ Manifesting</option>
+          <option>😈 Chaos Mode</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="song" placeholder="Currently vibing to..." />
+      </div>
+
+      <div class="form-group">
+        <select id="funfact">
+          <option value="">Pick a random truth 👀</option>
+          <option>I eat cereal with a fork 🥣</option>
+          <option>I text then put my phone face down 💬📴</option>
+          <option>I talk to myself... a lot 🎤</option>
+          <option>Been in my villain arc since 2022 😈</option>
+          <option>Lowkey addicted to bubble tea 🧋</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <select id="theme" onchange="changeTheme(this.value)">
+          <option value="default">Default Theme</option>
+          <option value="cyberpunk">Cyberpunk</option>
+          <option value="midnight">Midnight Chill</option>
+          <option value="pastel">Pastel Glow</option>
+        </select>
+      </div>
+
+      <div class="form-group ghost-toggle">
+        <label><input type="checkbox" id="ghostMode" /> Enable Ghost Mode 👻</label>
+      </div>
+
+      <button onclick="saveProfile()">Save & View Profile</button>
+    </div>
+  </div>
+
+  <script src="edit.js"></script>
+</body>
+</html>

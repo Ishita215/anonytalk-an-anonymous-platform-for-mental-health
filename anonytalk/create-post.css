@@ -1,0 +1,127 @@
+:root {
+      
+      --bg-start: #cde4d0;
+      --bg-end:   #e0f7f1;
+      --accent:   #2e7d32;
+      --light-text: #ffffff;
+    }
+
+   
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient( 135deg, var(--bg-start), var(--bg-end) );
+      transition: background 0.8s ease-in-out;
+    }
+
+    /* Floating particles */
+    .particle {
+      position: absolute;
+      font-size: clamp(1.25rem, 2.5vw, 2rem);
+      opacity: 0.6;
+      animation: float 10s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes float {
+      0%   { transform: translateY(0)   rotate(0deg);   }
+      100% { transform: translateY(-120vh) rotate(360deg);}  /* rise upward */
+    }
+
+    /* Glassmorphism card */
+    .form {
+      width: min(90%, 420px);
+      backdrop-filter: blur(12px) saturate(1.2);
+      background: rgba(255,255,255,0.25);
+      border-radius: 16px;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      color: var(--accent);
+      position: relative;
+      z-index: 10;
+      animation: fade‑in 0.8s ease;
+    }
+    @keyframes fade‑in {
+      from { opacity: 0; transform: translateY(25px); }
+      to   { opacity: 1; transform: translateY(0);    }
+    }
+
+    h2 {
+      text-align: center;
+      margin: 0 0 1.1rem;
+      font-weight: 600;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      background: rgba(255,255,255,0.75);
+      outline: 2px solid transparent;
+      transition: outline 0.25s;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: 2px solid var(--accent);
+    }
+
+    textarea { resize: vertical; min-height: 110px; }
+
+    button {
+      width: 100%;
+      padding: 0.8rem;
+      border: none;
+      border-radius: 12px;
+      background: var(--accent);
+      color: var(--light-text);
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+
+    /* Emoji preview */
+    #emojiPreview {
+      font-size: 2.75rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    /* Confetti burst – small coloured dots */
+    .confetti {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%,-50%) scale(0);
+      animation: pop 700ms forwards ease-out;
+    }
+    
+    @keyframes pop {
+      0%   { transform: translate(-50%,-50%) scale(0); opacity: 4; }
+      80%  { opacity: 1; }
+      100% { transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(1); opacity: 0; }
+    }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your AnonyTalk Profile</title>
+  <link rel="stylesheet" href="shared.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body id="body">
+
+  <div class="profile-wrapper">
+    <div class="top-avatar">
+      <img id="finalAvatar" src="" alt="Avatar" />
+      <h2 id="finalName">Nickname</h2>
+    </div>
+
+    <div class="profile-output" id="finalProfile">
+      <div class="info-block">
+        <p><strong>Mood:</strong></p>
+        <p class="profile-value" id="finalMood"></p>
+      </div>
+
+      <div class="info-block">
+        <p><strong>🎧 Vibing to:</strong></p>
+        <p class="profile-value" id="finalSong"></p>
+      </div>
+
+      <div class="info-block">
+        <p><strong>🧠 Fun Fact:</strong></p>
+        <p class="profile-value" id="finalFact"></p>
+      </div>
+
+      <div class="info-block">
+        <p><strong>Ghost Mode:</strong></p>
+        <p class="profile-value" id="finalGhost"></p>
+      </div>
+
+      <div class="button-wrap">
+        <button onclick="window.location.href='edit.html'">✏️ Edit Profile</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="profiles.js"></script>
+</body>
+</html>
