@@ -1,19 +1,14 @@
-window.onload = function () {
-  const profile = JSON.parse(localStorage.getItem("anonProfile"));
-  if (!profile) {
-    window.location.href = "edit.html";
-    return;
-  }
+    document.addEventListener("DOMContentLoaded", function () {
+        let savedUsername = localStorage.getItem("username") || "Anonymous";
+        let savedProfilePic = localStorage.getItem("profilePic") || "😊";
+        let savedStatus = localStorage.getItem("status") || "Set your status...";
 
-  document.getElementById("finalAvatar").src = profile.avatar;
-  document.getElementById("finalName").innerText = profile.nickname;
-  document.getElementById("finalMood").innerText = profile.mood;
-  document.getElementById("finalSong").innerText = profile.song;
-  document.getElementById("finalFact").innerText = profile.funfact;
-  document.getElementById("finalGhost").innerText = profile.ghost ? "Enabled 👻" : "Disabled 👀";
+        document.getElementById("username").textContent = savedUsername;
+        document.getElementById("profilePic").textContent = savedProfilePic;
+        document.getElementById("status").textContent = savedStatus;
+    });
 
-  document.body.className = profile.theme === "default" ? "" : profile.theme;
-  if (profile.ghost) {
-    document.getElementById("finalProfile").classList.add("ghost");
-  }
-};
+    function redirectToCustomization() {
+        window.location.href = "customize.html"; // This path is correct
+    }
+    
